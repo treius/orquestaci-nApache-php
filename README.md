@@ -72,7 +72,17 @@
           La cual dice dónde se generará el archivo log que guardará los datos de ejecución de 
           este script.
        
-6. Inicio del log 
-     Creamos el archivo log con un touch y le metemos la fecha de ejecución del programa.
-     La fecha del programa reflejará en el log las veces que se ha ejecutado a lo largo del 
-     tiempo este script
+6. INICIO DEL LOG 
+   Creamos el archivo log con un touch y le metemos la fecha de ejecución del programa.
+   La fecha del programa reflejará en el log las veces que se ha ejecutado a lo largo del 
+   tiempo este script
+
+7. COMPROBAR SERVICIOS INSTALADOS EN LA LISTA APACHE 
+   Recorremos la lista de IPs generada a partir del yaml (el cual ha sido leído con python) y 
+  llamamos a la función apache_check() pasándole por parámetro cada IP.
+  Toda la salida que genere esta función se añadirá al log.
+
+8. COMPROBAR SERVICIOS INSTALADOS EN LA LISTA PHP 
+   Recorremos la lista de IPs generada a partir del yaml y llamamos a la función 
+   php_check() pasándole por parámetro cada IP.
+   Toda la salida que genere esta función también será añadida al log.
